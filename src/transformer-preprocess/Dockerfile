@@ -13,5 +13,6 @@ RUN apt-get update && apt-get install -y \
 # ######### Set up Jason #########
 COPY MusicTransformer-tensorflow2.0/requirements.txt /src/requirements.txt
 RUN pip3 install -r /src/requirements.txt --ignore-installed
+RUN pip3 install tqdm
 
 COPY MusicTransformer-tensorflow2.0 /src

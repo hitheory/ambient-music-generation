@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo 'music transformer shell script 1'
+echo 'music transformer shell script'
 python /src/train.py
