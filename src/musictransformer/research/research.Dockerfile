@@ -46,8 +46,8 @@ RUN mkdir /.local && chmod a+rwx /.local
 WORKDIR /notebooks
 RUN chmod -R 777 /notebooks
 EXPOSE 8888
-COPY musictransformer/dev/jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
+COPY musictransformer/research/jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
 ######### Run Jupyter notebook #########
-COPY musictransformer/dev/bash_scripts /bash_scripts/
+COPY musictransformer/research/bash_scripts /bash_scripts/
 CMD ["bash", "-c", "/bash_scripts/dev.start.sh"]
