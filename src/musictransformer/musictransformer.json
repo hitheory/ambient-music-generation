@@ -3,7 +3,7 @@
     "name": "musictransformer"
   },
   "transform": {
-    "image": "hitheory/musictransformer:0.2.13",
+    "image": "hitheory/musictransformer:0.2.16",
     "cmd": [
       "sh",
       "/src/musictransformer.sh"

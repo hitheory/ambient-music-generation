@@ -16,7 +16,7 @@ tf.executing_eagerly()
 
 def train(input_path, save_path, l_r=None, batch_size=2, 
         pickle_dir=None, max_seq=1024, epochs=100, is_reuse=False, 
-        load_path=None, multi_gpu=True, num_layer=6, log_dir='/tmp/logs/mt_decoder'):
+        load_path=None, multi_gpu=True, num_layer=6, log_dir='/pfs/out/logs'):
     # load data
     # print(os.listdir(input_path))
     dataset = Data(input_path)
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    print('***** Given args', args)
+    print('args', args)
 
     # set arguments
     l_r = args.l_r
@@ -129,4 +129,3 @@ if __name__ == "__main__":
     num_layer = args.num_layers
     input_path = args.input_path
     train(input_path, save_path, l_r, batch_size, pickle_dir, max_seq, epochs, is_reuse, load_path, multi_gpu, num_layer)
-
