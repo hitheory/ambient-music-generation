@@ -5,15 +5,13 @@
   "transform": {
     "image": "hitheory/dev-transformer-preprocess:0.1.0",
     "cmd": [
-      "python3",
-      "/src/preprocess.py",
-      "/pfs/test-midi",
-      "/pfs/out"
+      "sh",
+      "/src/preprocess.sh"
     ]
   },
   "input": {
     "pfs": {
-      "repo": "test-midi",
+      "repo": "dev-midi",
       "glob": "/"
     }
   }
