@@ -1,6 +1,6 @@
 {
   "pipeline": {
-    "name": "test-midi"
+    "name": "test-onsets-and-frames"
   },
   "description": "A pipeline that performs midi transcription using Magenta's Onsets and Frames",
   "transform": {
@@ -11,10 +11,10 @@
       "/pfs/audio-processed-wav",
       "--output",
       "/pfs/out",
-      "checkpoint_dir",
+      "--checkpoint_dir",
       "/pfs/out/checkpoint_dir"
     ],
-    "image": "hitheory/test-onsets-and-frames:v0.0.1"
+    "image": "hitheory/onsets-and-frames:v1.0.2"
   },
   "input": {
     "pfs": {

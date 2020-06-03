@@ -1,9 +1,9 @@
 {
   "pipeline": {
-    "name": "musictransformer"
+    "name": "test-musictransformer"
   },
   "transform": {
-    "image": "hitheory/musictransformer:0.2.24",
+    "image": "hitheory/musictransformer:v1.0.0",
     "cmd": [
       "python3",
       "/src/train.py",

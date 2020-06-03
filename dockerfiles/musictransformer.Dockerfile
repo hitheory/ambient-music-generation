@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.2.0-gpu-jupyter
+FROM tensorflow/tensorflow:2.2.0-gpu
 ARG DEBIAN_FRONTEND=noninteractive
 ENV LANG C.UTF-8
 

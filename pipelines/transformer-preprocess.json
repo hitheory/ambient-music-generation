@@ -1,12 +1,14 @@
 {
   "pipeline": {
-    "name": "transformer-preprocess"
+    "name": "test-transformer-preprocess"
   },
   "transform": {
-    "image": "hitheory/transformer-preprocess:0.2.14",
+    "image": "hitheory/musictransformer:v1.0.0",
     "cmd": [
-      "sh",
-      "/src/preprocess.sh"
+      "python3",
+      "/src/preprocess.py",
+      "/pfs/midi",
+      "/pfs/out"
     ]
   },
   "input": {
