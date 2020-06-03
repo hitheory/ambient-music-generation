@@ -3,10 +3,20 @@
     "name": "musictransformer"
   },
   "transform": {
-    "image": "hitheory/musictransformer:0.2.16",
+    "image": "hitheory/musictransformer:0.2.24",
     "cmd": [
       "sh",
-      "/src/musictransformer.sh"
+      "/src/musictransformer.sh",
+      "--epochs",
+      "500",
+      "--save_path",
+      "/pfs/out",
+      "--input_path",
+      "/pfs/transformer-preprocess",
+      "--batch_size",
+      "2",
+      "--max_seq",
+      "2048"
     ]
   },
   "resource_limits": {

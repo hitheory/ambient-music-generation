@@ -18,9 +18,8 @@ def train(input_path, save_path, l_r=None, batch_size=2,
         pickle_dir=None, max_seq=1024, epochs=100, is_reuse=False, 
         load_path=None, multi_gpu=True, num_layer=6, log_dir='/pfs/out/logs'):
     # load data
-    # print(os.listdir(input_path))
     dataset = Data(input_path)
-    # print(dataset)
+    print('dataset', dataset)
 
 
     # load model
@@ -50,7 +49,7 @@ def train(input_path, save_path, l_r=None, batch_size=2,
     # Train Start
     idx = 0
     batchings = len(dataset.files) // batch_size
-    how_often_to_print = math.floor(batchings / 6)
+    how_often_to_print = 50
     for e in tqdm(range(epochs), desc='epochs'):
         mt.reset_metrics()
         for b in tqdm(range(batchings), desc='batches'):
