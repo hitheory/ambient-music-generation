@@ -14,7 +14,7 @@
       "--checkpoint_dir",
       "/pfs/out/checkpoint_dir"
     ],
-    "image": "hitheory/onsets-and-frames:v1.0.2"
+    "image": "hitheory/onsets-and-frames:v1.0.3"
   },
   "input": {
     "pfs": {
