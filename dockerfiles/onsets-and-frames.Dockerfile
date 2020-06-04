@@ -1,17 +1,12 @@
 FROM tensorflow/tensorflow:2.2.0-gpu
 RUN apt-get update \
-    && apt-get install wget curl zip git -y
-#   && apt-get install -y python3-pip python3-dev \
-#   && cd /usr/local/bin \
-#   && ln -s /usr/bin/python3 python \
-#   && pip3 install --upgrade pip
-# RUN apt-get install wget curl zip git -y
+    && apt-get install wget curl zip git vim -y
 
-# RUN pip3 install tensorflow==2.2.0
 RUN apt-get update && \
     apt-get install -y libfluidsynth1 \
     fluid-soundfont-gm build-essential libasound2-dev \
     libjack-dev ffmpeg sox
+RUN python3 -m pip install --upgrade pip
 RUN pip3 install pyfluidsynth pretty_midi
 RUN pip3 install -qU magenta
 RUN apt autoremove -y
