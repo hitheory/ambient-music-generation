@@ -6,9 +6,13 @@
   "transform": {
     "cmd": [
       "python3",
-      "/notebooks/src/transcribe.py"
+      "/src/transcribe.py",
+      "--input",
+      "/pfs/audio-processed-wav",
+      "--output",
+      "/pfs/out"
     ],
-    "image": "hitheory/onsets-and-frames:v1.0.3"
+    "image": "hitheory/onsets-and-frames:v1.0"
   },
   "input": {
     "pfs": {
